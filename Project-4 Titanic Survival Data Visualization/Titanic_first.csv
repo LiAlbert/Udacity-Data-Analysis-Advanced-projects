@@ -1,0 +1,11 @@
+,category,percentage,type
+0,survived,0.3838383838383838,all
+1,dead,0.6161616161616161,all
+2,female survived,0.7420382165605095,sex
+3,male survived,0.18890814558058924,sex
+4,minor(<=18) survived,0.5035971223021583,age
+5,elder(>=60) survived,0.2692307692307692,age
+6,else survived,0.3879781420765027,age
+7,class1 survived,0.6296296296296297,Ticket class
+8,class2 survived,0.47282608695652173,Ticket class
+9,class3 survived,0.24236252545824846,Ticket class

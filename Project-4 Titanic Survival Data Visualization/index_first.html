@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+  <style>
+
+      div.type_buttons {
+        position:fixed;
+        top:200px;
+        left:730px;
+      }
+
+      div.type_buttons {
+        background-color: rgb(251, 201, 127);
+        padding: 3px;
+        margin: 7px;
+
+      }
+
+      h1 {
+        text-align: left;
+        color:black;
+      }
+
+      h2 {
+        text-align: center;
+        color:black;
+      }
+
+  </style>
+
+
+  <script type="text/javascript">
+
+
+
+    function draw(data) {
+
+      d3.select("body")
+          .append("h2")
+          .text("all");
+
+      //set canvas
+      "use strict";
+
+
+      var svg = d3.select("body")
+        .append("svg")
+        .attr("width", 800)
+        .attr("height", 500)
+        .append('g')
+        .attr('class', 'chart');
+
+
+        //draw initial chart
+        var data_draw = dimple.filterData(data, "type", "all");
+        var myChart = new dimple.chart(svg, data_draw);
+        var x = myChart.addCategoryAxis("x", "category");
+        x.fontSize = "15px";
+        var y = myChart.addMeasureAxis("y", "percentage");
+        y.overrideMax = 1;
+        y.fontSize = "15px";
+        y.tickFormat = "%";
+        myChart.addSeries(null, dimple.plot.bar);
+        myChart.draw();
+
+        // 根据按下的按钮，更新柱状图内容
+        function update(t) {
+          //更新副标题
+          d3.select("h2")
+            .text(t);
+          //更新图表
+
+
+          svg.selectAll("*").remove();
+          var data_draw = dimple.filterData(data, "type", t);
+          var myChart = new dimple.chart(svg, data_draw);
+          var x = myChart.addCategoryAxis("x", "category");
+          x.fontSize = "15px";
+          var y = myChart.addMeasureAxis("y", "percentage");
+          y.overrideMax = 1;
+          y.fontSize = "15px";
+          y.tickFormat = "%";
+          myChart.addSeries(null, dimple.plot.bar);
+          myChart.draw();
+
+
+        }
+
+
+
+      var button_labels = ["all", "sex", "age", "Ticket class"];
+
+
+      var buttons = d3.select("body")
+                      .append("div")
+                      .attr("class", "type_buttons")
+                      .selectAll("div")
+                      .data(button_labels)
+                      .enter()
+                      .append("div")
+                      .text(function(d) {return d;});
+
+       buttons.on("click", function(d) {
+                             d3.select(".type_buttons")
+                               .selectAll("div")
+                               .transition()
+                               .duration(100)
+                               .style("color", "black")
+                               .style("background", "rgb(251, 201, 127)");
+
+                             d3.select(this)
+                               .transition()
+                               .duration(100)
+                               .style("background", "lightBlue")
+                               .style("color", "white");
+
+
+                               update(d);
+
+                           });
+
+
+    };
+  </script>
+</head>
+
+<body>
+<h1> 谁能在泰坦尼克号上生存下来？</h1>
+  <script type="text/javascript">
+
+      d3.csv("Titanic_first.csv", draw);
+
+  </script>
+</body>
+
+</html>
