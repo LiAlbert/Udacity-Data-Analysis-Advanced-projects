@@ -1,9 +1,3 @@
----
-output:
-  pdf_document: default
-  word_document: default
-  html_document: default
----
 # Project Wrangle OpenStreetMap Data
 
 ### Map Area
