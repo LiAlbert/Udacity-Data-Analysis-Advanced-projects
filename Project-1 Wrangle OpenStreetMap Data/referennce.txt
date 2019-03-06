@@ -1,0 +1,13 @@
+参考网站列表
+
+OpenStreetMap: WikiProject China
+https://wiki.openstreetmap.org/wiki/WikiProject_China
+
+stackoverflow: how to delete a characater from a sring
+https://stackoverflow.com/questions/3559559/how-to-delete-a-character-from-a-string-using-python
+
+stackoverflow: how to import .sql files into sqlie3
+https://stackoverflow.com/questions/2049109/how-do-i-import-sql-files-into-sqlite-3
+
+tutorrialspoint: Python - Strings
+https://www.tutorialspoint.com/python/python_strings.htm
