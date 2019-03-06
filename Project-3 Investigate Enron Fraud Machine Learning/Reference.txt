@@ -1,0 +1,23 @@
+1.How do I print the key-value pairs of a dictionary in python?
+https://stackoverflow.com/questions/26660654/how-do-i-print-the-key-value-pairs-of-a-dictionary-in-python/26660785
+
+2.Python模块：生成随机数模块random
+http://blog.csdn.net/pipisorry/article/details/39086463
+
+3.matplotlib.pyplot.scatter
+https://matplotlib.org/api/_as_gen/matplotlib.pyplot.scatter.html
+
+4.Matplotlib save figure to image file
+https://pythonspot.com/matplotlib-save-figure-to-image-file/
+
+5.Python List sort()
+https://www.programiz.com/python-programming/methods/list/sort
+
+6.sklearn.feature_selection.SelectKBest
+http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html#sklearn.feature_selection.SelectKBest
+
+7.sklearn.model_selection.GridSearchCV
+http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html
+
+8.scikit-learn Precision-Recall
+http://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html
