@@ -1,4 +1,4 @@
-Red Wine Exploration by Li You
+Red Wine Exploration 
 ========================================================
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, packages}
